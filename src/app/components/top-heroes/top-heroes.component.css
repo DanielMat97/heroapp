@@ -1,0 +1,15 @@
+h1{
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 2em;
+}
+
+a{
+    font-weight: 400;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    padding: 20px 40px;
+    width: 23%;
+    text-transform: capitalize;
+    margin: 5px;
+}

@@ -1,0 +1,13 @@
+<div class="w-100 mt-5">
+    <h1>Hero Search</h1>
+    <div class="w-25">
+        <div class="w-100 container-input">
+            <input type="text" class="form-control" placeholder="Search" (input)="handlerSearch($event)">
+            <div *ngIf="heroes.length != 0" class="cont-autocomplete">
+                <div *ngFor="let hero of heroes" class="w-100 border cont-btn">
+                    <button class="btn w-100">{{ hero.name }}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
