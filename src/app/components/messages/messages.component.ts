@@ -1,26 +1,24 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { MessagesPresenter } from './messages.presenter';
+import { MessagesService } from 'src/app/services/messages.service';
 
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
-  styleUrls: ['./messages.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [MessagesPresenter],
+  styleUrls: ['./messages.component.css']
 })
-export class MessagesComponent {
-  get messages(): string[] {
-    return this.presenter.messages;
-  }
+export class MessagesComponent implements OnInit{
+  messages: Array<string> = [];
   
-  get hasMessages(): boolean {
-    return this.presenter.hasMessages;
+  constructor(private messagesService: MessagesService) {}
+
+  ngOnInit(){
+    this.messagesService.getMessage().subscribe(result => {
+      this.messages = result;
+      console.log(result);
+    });
   }
 
-  @Input() set messages(value: string[]) {
-    this.presenter.messages = value;
+  clearMessages(){
+    this.messagesService.clear();
   }
-  
-  constructor(private presenter: MessagesPresenter) {}
-
 }

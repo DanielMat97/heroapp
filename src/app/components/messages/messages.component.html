@@ -1,6 +1,11 @@
-<h1>Messages</h1>
-<div class="w-100">
+<div *ngIf="messages.length != 0" class="w-100">
+  <div class="w-100 d-flex">
+    <h1>Messages</h1>
+    <button class="btn btn-warning mx-4" (click)="clearMessages()">Clear</button>
+  </div>
+  <div class="w-100">
     <div *ngFor="let message of messages" class="w-100">
-        <p>{{ messages }}</p>
+      <p>{{ message }}</p>
     </div>
+  </div>
 </div>

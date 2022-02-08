@@ -9,6 +9,7 @@ import { HeroesService } from 'src/app/services/heroes.service';
 })
 export class SearcherComponent implements OnInit {
   heroes: Array<HeroModule> = [];
+  term: string = '';
 
   constructor(private heroesService: HeroesService) { }
 
@@ -17,7 +18,8 @@ export class SearcherComponent implements OnInit {
 
   handlerSearch(event: any) {
     const term = event.target.value;
-    this.heroesService.searchHeroes(term).subscribe(result => {
+    this.term = term;
+    this.heroesService.searchHeroes(this.term).subscribe(result => {
       this.heroes = result;
     });
   }

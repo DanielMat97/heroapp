@@ -3,3 +3,7 @@ h1 {
   letter-spacing: -1px;
   font-size: 2em;
 }
+
+p{
+  margin: 0 !important;
+}
