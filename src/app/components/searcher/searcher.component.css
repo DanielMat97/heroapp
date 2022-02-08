@@ -22,7 +22,7 @@ h1 {
   background: white;
   transition: all .5s ease-in-out;
 }
-.cont-btn button:hover{
+.cont-btn a:hover{
   background: #0d6efd;
   color: whitesmoke;
 }

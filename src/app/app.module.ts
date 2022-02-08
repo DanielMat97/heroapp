@@ -13,6 +13,10 @@ import { SearcherComponent } from './components/searcher/searcher.component';
 
 import { InMemoryDataService } from './services/in-memory.service';
 import { MessagesComponent } from './components/messages/messages.component';
+import { ListHeroesComponent } from './components/list-heroes/list-heroes.component';
+import { AddHeroeComponent } from './components/add-heroe/add-heroe.component';
+import { DetailsComponent } from './views/details/details.component';
+import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { MessagesComponent } from './components/messages/messages.component';
     HeroesComponent,
     TopHeroesComponent,
     SearcherComponent,
-    MessagesComponent
+    MessagesComponent,
+    ListHeroesComponent,
+    AddHeroeComponent,
+    DetailsComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule,

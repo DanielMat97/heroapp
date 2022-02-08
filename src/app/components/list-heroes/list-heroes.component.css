@@ -1,0 +1,15 @@
+h1 {
+  font-weight: bold;
+  letter-spacing: -1px;
+  font-size: 2em;
+}
+
+.cont-hero{
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+p{
+  text-transform: capitalize;
+}

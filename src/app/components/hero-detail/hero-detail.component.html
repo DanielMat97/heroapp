@@ -1,0 +1,19 @@
+<h1>Hero Detail</h1>
+<hr class="mb-5">
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <div class="w-100">
+                <h1>Id: {{ hero.id }}</h1>
+                <h1>Name: {{ hero.name }}</h1>
+                <input (input)="handlerValidator($event)" type="text" class="form-control" [value]="hero.name">
+                <div class="d-flex justify-content-between mt-3">
+                    <a routerLink="/dashboard" class="btn btn-secondary">Go Back</a>
+                    <button [disabled]="!isEditHero" (click)="editHero()" class="btn btn-warning">Edit Hero</button>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

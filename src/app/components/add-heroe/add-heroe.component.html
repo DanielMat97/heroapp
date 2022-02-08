@@ -1,0 +1,14 @@
+<div class="w-100 d-flex">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-1"><h2>Save</h2></div>
+      <div class="col-3"><h2>Hero Name:</h2></div>
+      <div class="col-6">
+        <input (input)="handlerValidator($event)" type="text" class="form-control" />
+      </div>
+      <div class="col-2">
+        <button class="btn btn-success w-100" [disabled]="!isCreatedHero" (click)="addHero()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
